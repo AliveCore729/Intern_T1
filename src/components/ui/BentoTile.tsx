@@ -1,9 +1,9 @@
 'use client'
 
-import { motion, HTMLMotionProps } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
-interface BentoTileProps extends HTMLMotionProps<"div"> {
+interface BentoTileProps {
   children: React.ReactNode
   className?: string
   delay?: number
@@ -23,7 +23,7 @@ const tileVariants = {
   })
 }
 
-export function BentoTile({ children, className, delay = 0, ...props }: BentoTileProps) {
+export function BentoTile({ children, className, delay = 0 }: BentoTileProps) {
   return (
     <motion.div
       custom={delay}
@@ -38,7 +38,6 @@ export function BentoTile({ children, className, delay = 0, ...props }: BentoTil
         "before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:opacity-0 before:transition-opacity hover:before:opacity-100",
         className
       )}
-      {...props}
     >
       <div className="absolute inset-0 bg-grain pointer-events-none" />
       <div className="relative z-10 h-full w-full">
