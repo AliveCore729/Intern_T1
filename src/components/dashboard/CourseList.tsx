@@ -1,13 +1,18 @@
 import { createClient } from '@/utils/supabase/server'
 import { CourseTile } from './CourseTile'
+import { Database } from '@/types/supabase'
+
+type Course = Database['public']['Tables']['courses']['Row']
 
 export async function CourseList() {
   const supabase = await createClient()
 
-  const { data: courses, error } = await supabase
+  const { data, error } = await supabase
     .from('courses')
     .select('*')
     .order('created_at', { ascending: false })
+
+  const courses = data as Course[] | null
 
   if (error) {
     return (
