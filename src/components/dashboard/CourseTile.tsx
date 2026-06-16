@@ -17,10 +17,9 @@ export function CourseTile({ course, delay = 0 }: CourseTileProps) {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    // Animate progress bar on mount
     const timer = setTimeout(() => {
       setProgress(course.progress)
-    }, 500 + delay * 100) // Stagger progress animation slightly after tile appears
+    }, 500 + delay * 100)
     
     return () => clearTimeout(timer)
   }, [course.progress, delay])

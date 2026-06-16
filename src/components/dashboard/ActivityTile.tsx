@@ -2,7 +2,6 @@ import { BentoTile } from '@/components/ui/BentoTile'
 import { Activity } from 'lucide-react'
 
 export function ActivityTile({ delay = 0 }: { delay?: number }) {
-  // Mock activity data for the graph
   const activityData = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))
   const maxVal = Math.max(...activityData)
 
@@ -19,7 +18,6 @@ export function ActivityTile({ delay = 0 }: { delay?: number }) {
       <div className="flex-1 flex items-end gap-1 sm:gap-2">
         {activityData.map((val, i) => {
           const heightPercent = (val / maxVal) * 100
-          // Add a simple color scale based on height
           const colorClass = heightPercent > 70 ? 'bg-primary' : heightPercent > 30 ? 'bg-primary/60' : 'bg-primary/20'
           return (
             <div key={i} className="flex-1 flex flex-col justify-end h-full group/bar relative">

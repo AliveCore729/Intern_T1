@@ -26,13 +26,12 @@ export default function Sidebar() {
       className={cn(
         "glass-panel border-r border-border flex flex-col justify-between py-6 transition-all duration-300 ease-in-out z-10",
         isExpanded ? "w-64" : "w-20",
-        "hidden md:flex" // Hide on mobile for now, will implement mobile menu differently if needed or adjust later
+        "hidden md:flex"
       )}
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
     >
       <div className="px-4 flex flex-col gap-8">
-        {/* Logo area */}
         <div className="flex items-center justify-center md:justify-start md:px-2 h-10 overflow-hidden">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary to-purple-600 flex-shrink-0 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.5)]">
             <span className="text-white font-bold text-lg">N</span>
@@ -47,7 +46,6 @@ export default function Sidebar() {
           </span>
         </div>
 
-        {/* Navigation */}
         <ul className="flex flex-col gap-2">
           {navItems.map((item) => (
             <li key={item.id} className="relative">

@@ -7,7 +7,6 @@ import { SkeletonLoader } from '@/components/dashboard/SkeletonLoader'
 export default function Home() {
   return (
     <main className="p-6 md:p-10 max-w-7xl mx-auto w-full relative">
-      {/* Background ambient glow */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-600/10 blur-[120px] pointer-events-none" />
       

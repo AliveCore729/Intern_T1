@@ -1,5 +1,7 @@
 # Next-Gen Learning Dashboard
 
+🚀 **Live Demo:** [https://intern-t1.vercel.app/](https://intern-t1.vercel.app/)
+
 A high-fidelity "Student Dashboard" prototype that fetches live data from Supabase, built with Next.js, Tailwind CSS, and Framer Motion.
 
 ## Features
