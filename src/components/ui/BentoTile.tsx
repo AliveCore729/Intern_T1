@@ -1,9 +1,9 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, HTMLMotionProps } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
-interface BentoTileProps extends React.HTMLAttributes<HTMLDivElement> {
+interface BentoTileProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode
   className?: string
   delay?: number
